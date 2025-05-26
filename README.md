@@ -91,17 +91,16 @@ This project includes a custom Flutter splash screen that displays the **S-Rocks
 
 ## 📁 Folder Structure
 
-lib/
-├── home/
-│ ├── home_view.dart # UI (View)
-│ ├── home_view_model.dart # ViewModel (logic + state)
-│ ├── home_service.dart # Repository (Firebase fetching)
-│ ├── service_model.dart # Data Model
-│ └── widgets/ # UI components like cards, nav bar
-├── splash_screen.dart # Splash Screen UI
-├── locator.dart # Dependency Injection setup (get_it)
-└── main.dart # App entry point
-
+lib/  
+├── home/  
+│ ├── home_view.dart           # UI (View)  
+│ ├── home_view_model.dart     # ViewModel (logic + state)  
+│ ├── home_service.dart        # Repository (Firebase fetching)  
+│ ├── service_model.dart       # Data Model  
+│ └── widgets/                 # UI components like cards, nav bar  
+├── splash_screen.dart         # Splash Screen UI  
+├── locator.dart               # Dependency Injection setup (get_it)  
+└── main.dart                  # App entry point
 
 ---
 
@@ -111,12 +110,12 @@ lib/
 
 Each document in this collection represents a service card on the home screen.
 
-| Field            | Type   | Description                                 |
-|------------------|--------|---------------------------------------------|
-| `title`          | String | The main title of the service               |
-| `subtitle`       | String | Short description of the service            |
-| `backgroundImage`| String | Asset path or image URL used as background  |
-| `leadingIcon`    | String | Asset path or icon for the service          |
+| Field             | Type   | Description                                 |
+|-------------------|--------|---------------------------------------------|
+| `title`           | String | The main title of the service               |
+| `subtitle`        | String | Short description of the service            |
+| `backgroundImage` | String | Asset path or image URL used as background  |
+| `leadingIcon`     | String | Asset path or icon for the service          |
 
 ### Example Document:
 
@@ -128,40 +127,38 @@ Each document in this collection represents a service card on the home screen.
   "leadingIcon": "assets/images/music_one.png"
 }
 
-### Firestore Screenshot:
-
-![Firestore Structure](assets/screenshots/firestore_structure.png)
-
 🧠 Architecture
-    MVVM (Model-View-ViewModel) architecture for clean separation of concerns.
-    Provider for state management.
-    get_it for dependency injection and singleton services.
-    Firebase Firestore for real-time data.
+        MVVM (Model-View-ViewModel) architecture for clean separation of concerns.
 
-## 📷 Screenshots / Demo
+        Provider for state management.
+
+        get_it for dependency injection and singleton services.
+
+        Firebase Firestore for real-time data.
 
 ### 🏠 Splash Screen  
-![Splash Screen](assets/screenshots/splashScreen.png)
+![Splash Screen](assets/screenshots/splashScreen.jpeg)
 
 ### 🏠 Home Screen  
-![Home Screen](assets/screenshots/homeView.png)
+![Home Screen](assets/screenshots/homeView.jpeg)
 
 ### 📄 Details Screen  
-![Details Screen](assets/screenshots/music_service.png)
+![Details Screen](assets/screenshots/music_service.jpeg)
 
 ### 🧱 Firestore Structure  
 ![Firestore Structure](assets/screenshots/firestore_structure.png)
 
----
-
-## 📽️ Demo Video
+### 📽️ Demo Video
 
 🎬 [Click here to watch the demo](assets/screenshots/demo.mp4)
+
+
 
 📞 Contact
 If you'd like to get in touch, feel free to reach out:
 
-    Name: Ch Bhuvan Kumar
-    Email: chbhuvi111@gmail.com
+Name: Ch Bhuvan Kumar
+
+Email: chbhuvi111@gmail.com
 
 Thank you for reviewing my project! 🚀
