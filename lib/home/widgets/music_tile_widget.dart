@@ -63,9 +63,10 @@ class MusicTileWidget extends StatelessWidget {
                 ),
                 subtitle: Text(
                   service.subtitle,
+                  maxLines: 1,
                   style: GoogleFonts.poppins(
                     color: Colors.white70,
-                    fontSize: 12,
+                    fontSize: 10,
                   ),
                 ),
               ),

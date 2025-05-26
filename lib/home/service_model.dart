@@ -3,14 +3,12 @@ class ServiceModel {
   final String subtitle;
   final String backgroundImage;
   final String leadingIcon;
-  final String trailingIcon;
 
   ServiceModel({
     required this.title,
     required this.subtitle,
     required this.backgroundImage,
     required this.leadingIcon,
-    required this.trailingIcon,
   });
 
   // Helper method to safely get string values from the map
@@ -32,7 +30,6 @@ class ServiceModel {
       subtitle: getString(map, 'subtitle'),
       backgroundImage: getString(map, 'backgroundImage'),
       leadingIcon: getString(map, 'leadingIcon'),
-      trailingIcon: getString(map, 'trailingIcon'),
     );
   }
 
@@ -42,7 +39,6 @@ factory ServiceModel.mock() {
     subtitle: 'Listen to your favorite tracks',
     backgroundImage: 'assets/images/bg1.png',
     leadingIcon: 'assets/images/music_one.png',
-    trailingIcon: 'assets/images/arrow_right.png',
   );
 }
 
@@ -54,7 +50,6 @@ factory ServiceModel.mock() {
       'subtitle': subtitle,
       'backgroundImage': backgroundImage,
       'leadingIcon': leadingIcon,
-      'trailingIcon': trailingIcon,
     };
   }
 }

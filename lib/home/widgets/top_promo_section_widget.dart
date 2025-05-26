@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TopPromoSectionWidget extends StatelessWidget {
@@ -6,136 +7,125 @@ class TopPromoSectionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height;
-    final screenWidth = MediaQuery.of(context).size.width;
-
     return Container(
-      height: screenHeight * 0.425,
+      height: 320.h,
       width: double.infinity,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(25),
-          bottomRight: Radius.circular(25),
+          bottomLeft: Radius.circular(25.r),
+          bottomRight: Radius.circular(25.r),
         ),
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [Color(0xFFA90140), Color(0xFF550120)],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         ),
       ),
-      padding: const EdgeInsets.fromLTRB(0, 20, 0, 16),
+      padding: EdgeInsets.fromLTRB(0, 22.h, 0, 14.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           // Search Bar + User Avatar
-          Row(
-            children: [
-              Expanded(
-                child: Container(
-                  height: screenHeight * 0.05,
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF2F2F39),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        "assets/images/Search.png",
-                        color: Colors.white,
-                      ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Text(
-                          "Search 'Punjabi Lyrics' ",
-                          style: GoogleFonts.poppins(
-                            color: const Color(0xFF61616B),
-                            fontSize: screenHeight * 0.017,
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.w),
+            child: Row(
+              children: [
+                // Custom Styled Search Container
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 12.w,
+                      vertical: 10.h,
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF2F2F39),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    child: Row(
+                      children: [
+                        Image.asset(
+                          "assets/images/Search.png",
+                          color: Colors.white,
+                          height: 20.h,
+                          width: 20.h,
+                        ),
+                        SizedBox(width: 8.w),
+                        Expanded(
+                          child: Text(
+                            "Search 'Punjabi Lyrics'",
+                            style: GoogleFonts.poppins(
+                              color: const Color(0xFF61616B),
+                              fontSize: 14.sp,
+                            ),
                           ),
                         ),
-                      ),
-                      const SizedBox(width: 10),
-                      Image.asset(
-                        'assets/images/line.png',
-                        color: Colors.white38,
-                        height: screenHeight * 0.025,
-                        width: screenHeight * 0.025,
-                      ),
-                      const SizedBox(width: 10),
-                      Image.asset(
-                        'assets/images/mic1.png',
-                        color: Colors.white,
-                        height: screenHeight * 0.025,
-                        width: screenHeight * 0.025,
-                      ),
-                    ],
+                        Image.asset(
+                          'assets/images/line.png',
+                          color: Colors.white38,
+                          height: 20.h,
+                          width: 20.h,
+                        ),
+                        SizedBox(width: 10.w),
+                        Image.asset(
+                          'assets/images/mic1.png',
+                          color: Colors.white,
+                          height: 20.h,
+                          width: 20.h,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(width: 12),
-              Image.asset(
-                "assets/images/user.png",
-                width: screenWidth * 0.08,
-                height: screenWidth * 0.08,
-              ),
-            ],
+                SizedBox(width: 12.w),
+                Image.asset(
+                  "assets/images/user.png",
+                  width: 32.w,
+                  height: 32.w,
+                ),
+              ],
+            ),
           ),
 
-          SizedBox(height: screenHeight * 0.02),
+          SizedBox(height: 16.h),
 
           // Text Section
           Text(
             "Claim your",
-            style: GoogleFonts.syne(
-              color: Colors.white,
-              fontSize: screenHeight * 0.025,
-            ),
+            style: GoogleFonts.syne(color: Colors.white, fontSize: 18.sp),
           ),
           Text(
             "Free Demo",
-            style: GoogleFonts.lobster(
-              color: Colors.white,
-              fontSize: screenHeight * 0.06,
-            ),
+            style: GoogleFonts.lobster(color: Colors.white, fontSize: 38.sp),
           ),
           Text(
             "for custom Music Production",
-            style: GoogleFonts.syne(
-              color: Colors.white,
-              fontSize: screenHeight * 0.022,
-            ),
+            style: GoogleFonts.syne(color: Colors.white, fontSize: 16.sp),
           ),
 
-          SizedBox(height: screenHeight * 0.015),
+          SizedBox(height: 14.h),
 
-          // Bottom Row with CD, Button, Piano
+          // CD + Button + Piano
           SizedBox(
-            height: screenHeight * 0.12,
+            height: 90.h,
             width: double.infinity,
             child: Stack(
               children: [
-                // CD Image - Left
                 Positioned(
-                  left: -20,
+                  left: -20.w,
                   bottom: 0,
-                  child: Image.asset(
-                    "assets/images/cd.png",
-                    width: screenWidth * 0.22,
-                  ),
+                  child: Image.asset("assets/images/cd.png", width: 80.w),
                 ),
-
-                // Book Now Button - Center
                 Align(
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(20.r),
                       ),
                       padding: EdgeInsets.symmetric(
-                        horizontal: screenWidth * 0.06,
-                        vertical: screenHeight * 0.012,
+                        horizontal: 18.w,
+                        vertical: 10.h,
                       ),
                     ),
                     child: Text(
@@ -143,20 +133,15 @@ class TopPromoSectionWidget extends StatelessWidget {
                       style: GoogleFonts.syne(
                         color: Colors.black87,
                         fontWeight: FontWeight.bold,
-                        fontSize: screenHeight * 0.018,
+                        fontSize: 14.sp,
                       ),
                     ),
                   ),
                 ),
-
-                // Piano Image - Right
                 Positioned(
-                  right: -27,
+                  right: -27.w,
                   bottom: 0,
-                  child: Image.asset(
-                    "assets/images/piono.png",
-                    width: screenWidth * 0.22,
-                  ),
+                  child: Image.asset("assets/images/piono.png", width: 80.w),
                 ),
               ],
             ),
