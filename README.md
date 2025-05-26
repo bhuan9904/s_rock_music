@@ -119,7 +119,7 @@ Each document in this collection represents a service card on the home screen.
 
 ### Example Document:
 
-```json
+json
 {
   "title": "Music Production",
   "subtitle": "Get your music produced by professionals",
@@ -129,11 +129,8 @@ Each document in this collection represents a service card on the home screen.
 
 🧠 Architecture
         MVVM (Model-View-ViewModel) architecture for clean separation of concerns.
-
-        Provider for state management.
-
+        rovider for state management.
         get_it for dependency injection and singleton services.
-
         Firebase Firestore for real-time data.
 
 ### 🏠 Splash Screen  
