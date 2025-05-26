@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:s_rocks_music/home/home_view_model.dart';
 import 'package:s_rocks_music/locator.dart';
+import 'package:s_rocks_music/splash_screen.dart';
 import 'home/home_view.dart';
 import 'firebase_options.dart';
 
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const HomeView(),
+      child: SplashScreen(),
     );
   }
 }

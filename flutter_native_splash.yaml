@@ -1,0 +1,7 @@
+flutter_native_splash:
+  color: "#0F0F0F" # Background color of splash screen (matches your app bg)
+  image: assets/images/SRocksMusicLogo.png # Path to your logo image
+  android: true
+  ios: true
+  android_gravity: center
+  ios_content_mode: scaleAspectFit
