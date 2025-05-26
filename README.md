@@ -20,17 +20,18 @@ This app demonstrates:
 
 ## Features
 
-- ✅ Clean and responsive UI built with Flutter and ScreenUtil
-- ✅ Recreated from Figma design: [Figma Link](https://www.figma.com/design/YAsYsNFGxmoauPpSLrUMtF/Assignment---Flutter?node-id=0-1)
-- ✅ Each card displays service info (icon, title, subtitle)
-- ✅ Tap on any service card to navigate to a detail screen
-- ✅ Firebase Firestore used to fetch service data dynamically
-- ✅ MVVM architecture implemented
-- ✅ State management using **Provider**
-- ✅ Dependency Injection using **get_it**
-- ✅ Proper folder structure for scalability and maintainability
+- ✅ Clean and responsive UI built with Flutter and ScreenUtil  
+- ✅ Recreated from Figma design: [Figma Link](https://www.figma.com/design/YAsYsNFGxmoauPpSLrUMtF/Assignment---Flutter?node-id=0-1)  
+- ✅ Each card displays service info (icon, title, subtitle)  
+- ✅ Tap on any service card to navigate to a detail screen  
+- ✅ Firebase Firestore used to fetch service data dynamically  
+- ✅ MVVM architecture implemented  
+- ✅ State management using **Provider**  
+- ✅ Dependency Injection using **get_it**  
+- ✅ Proper folder structure for scalability and maintainability  
 
 ---
+
 ## 🚀 Splash Screen
 
 This project includes a custom Flutter splash screen that displays the **S-Rocks-Music** branding before loading the main content.
@@ -44,6 +45,7 @@ This project includes a custom Flutter splash screen that displays the **S-Rocks
 - Splash screen implemented in `lib/splash_screen.dart`
 - Shown as the initial screen before navigating to `HomeView`
 
+---
 
 ## Getting Started
 
@@ -87,17 +89,18 @@ This project includes a custom Flutter splash screen that displays the **S-Rocks
 
 ---
 
-## Folder Structure
+## 📁 Folder Structure
 
 lib/
 ├── home/
-│ ├── home_view.dart           # UI (View)
-│ ├── home_view_model.dart     # ViewModel (logic + state)
-│ ├── home_service.dart        # Repository (Firebase fetching)
-│ ├── service_model.dart       # Data Model
-│ └── widgets/                 # UI components like cards, nav bar
-├── locator.dart               # Dependency Injection setup (get_it)
-└── main.dart                  # App entry point
+│ ├── home_view.dart # UI (View)
+│ ├── home_view_model.dart # ViewModel (logic + state)
+│ ├── home_service.dart # Repository (Firebase fetching)
+│ ├── service_model.dart # Data Model
+│ └── widgets/ # UI components like cards, nav bar
+├── splash_screen.dart # Splash Screen UI
+├── locator.dart # Dependency Injection setup (get_it)
+└── main.dart # App entry point
 
 
 ---
@@ -108,14 +111,15 @@ lib/
 
 Each document in this collection represents a service card on the home screen.
 
-| Field           | Type   | Description                          |
-|----------------|--------|--------------------------------------|
-| `title`        | String | The main title of the service        |
-| `subtitle`     | String | Short description of the service     |
-| `backgroundImage` | String | Asset path or image URL used as card background |
-| `leadingIcon`  | String | Asset path or icon for the service   |
+| Field            | Type   | Description                                 |
+|------------------|--------|---------------------------------------------|
+| `title`          | String | The main title of the service               |
+| `subtitle`       | String | Short description of the service            |
+| `backgroundImage`| String | Asset path or image URL used as background  |
+| `leadingIcon`    | String | Asset path or icon for the service          |
 
 ### Example Document:
+
 ```json
 {
   "title": "Music Production",
@@ -124,43 +128,40 @@ Each document in this collection represents a service card on the home screen.
   "leadingIcon": "assets/images/music_one.png"
 }
 
-Here is the Firestore database structure used in this project:
+### Firestore Screenshot:
 
 ![Firestore Structure](assets/screenshots/firestore_structure.png)
 
-## Architecture
+🧠 Architecture
+    MVVM (Model-View-ViewModel) architecture for clean separation of concerns.
+    Provider for state management.
+    get_it for dependency injection and singleton services.
+    Firebase Firestore for real-time data.
 
-- **MVVM** (Model-View-ViewModel) architecture pattern for clean separation of concerns.
-- **Provider** package for state management.
-- **get_it** package for dependency injection to manage singletons and service location.
-- Firebase Firestore integration for dynamic data loading.
+## 📷 Screenshots / Demo
 
----
-
-## Screenshots / Demo
-
-### 🏠 Splash Screen
+### 🏠 Splash Screen  
 ![Splash Screen](assets/screenshots/splashScreen.png)
 
-### 🏠 Home Screen
+### 🏠 Home Screen  
 ![Home Screen](assets/screenshots/homeView.png)
 
-### 📄 Details Screen
+### 📄 Details Screen  
 ![Details Screen](assets/screenshots/music_service.png)
+
+### 🧱 Firestore Structure  
+![Firestore Structure](assets/screenshots/firestore_structure.png)
+
+---
 
 ## 📽️ Demo Video
 
 🎬 [Click here to watch the demo](assets/screenshots/demo.mp4)
----
 
-## Contact
-
+📞 Contact
 If you'd like to get in touch, feel free to reach out:
 
-    - **Name:** Ch Bhuvan Kumar  
-    - **Email:** chbhuvi111@gmail.com  
-    - **LinkedIn:** [ch-bhuvan-kumar](https://www.linkedin.com/in/ch-bhuvan-kumar)  
-    - **GitHub:** [bhuan9904](https://github.com/bhuan9904)
-
+    Name: Ch Bhuvan Kumar
+    Email: chbhuvi111@gmail.com
 
 Thank you for reviewing my project! 🚀
